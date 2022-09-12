@@ -1,3 +1,4 @@
+import java.util.Objects;
 import java.util.Scanner;
 
 public class FitnessLevel {
@@ -10,34 +11,29 @@ public class FitnessLevel {
         int age = sc.nextInt();
         System.out.println("Enter the weight:");
         int weight = sc.nextInt();
-        //System.out.println("Can you run 5 kms? please enter 'Yes' or 'No'");
-        //String run = sc.nextLine();
+        System.out.println("Can you run 5 kms? please enter 'Yes' or 'No'");
+        String Resp = sc.next();
+
 
         if (age>15 && age<40) {
-            if (weight > 30 && weight < 70)
-                System.out.println("You are fit");
+            if (Objects.equals(Resp, "Yes")  || Objects.equals(Resp,"No")) {
+                if (weight > 30 && weight < 70) {
+                    System.out.println("You are fit");
+                } else if (weight < 30) {
+                    System.out.println("You are Fit but you need to be healthier");
+                } else if (weight > 80 && Objects.equals(Resp, "No")) {
+                    System.out.println("You are at RISK, improve your fitness level and reduce weight.");
+                }
+            }
+                else {
+                 System.out.println("Pls share right answer for 'Can you run 5kms?' ");
+                }
         }
-            else
-                System.out.println("You are Fit but you need to be healthier");
+        else
+            System.out.println("You’re only as old as you feel");
 
-        }
+    }
+}
 
-        /*String s1 = "Y";
-        String s2 = "N";
-        boolean b1 = Boolean.valueOf(s1);
-        boolean b2 = Boolean.valueOf(s2);
-        if (run == s1){
-            System.out.println(b1);
-        }
-
-        switch (run) {
-                   case "Y":
-                       return true;
-                  case "N":
-                       return false;
-                  default:
-                       throw new IllegalArgumentException("Please Enter 'Y' or 'N'");
-             }*/
-        }
 
 
