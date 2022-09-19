@@ -12,16 +12,15 @@ public class FitnessLevel {
         System.out.println("Enter the weight:");
         int weight = sc.nextInt();
         System.out.println("Can you run 5 kms? please enter 'Yes' or 'No'");
-        String Resp = sc.next();
-
+        String Response = sc.next();
 
         if (age>15 && age<40) {
-            if (Objects.equals(Resp, "Yes")  || Objects.equals(Resp,"No")) {
+            if (Objects.equals(Response, "Yes")  || Objects.equals(Response,"No")) {
                 if (weight > 30 && weight < 70) {
                     System.out.println("You are fit");
                 } else if (weight < 30) {
                     System.out.println("You are Fit but you need to be healthier");
-                } else if (weight > 80 && Objects.equals(Resp, "No")) {
+                } else if (weight > 80 && Objects.equals(Response, "No")) {
                     System.out.println("You are at RISK, improve your fitness level and reduce weight.");
                 }
             }

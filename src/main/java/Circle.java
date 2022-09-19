@@ -5,8 +5,6 @@ public class Circle {
         System.out.println("Step 2");
         Scanner r = new Scanner(System.in);
         System.out.println("Enter radius of Circle:");
-
-        System.out.println("Step 3");
         Radius = r.nextDouble();
         }
        public Circle (double defaultRadius){
