@@ -3,7 +3,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class SampleExercise {
+public class SampleExercise_1 {
     public static void main(String[] args) {
         //Multiplication of two numbers
         Scanner sc = new Scanner(System.in);
@@ -68,18 +68,18 @@ public class SampleExercise {
         int sum = b1 + b2;
         System.out.println("Addition of two binary string:" +Integer.toBinaryString(sum));
         //Addition of two complex numbers
-        SampleExercise ComplexNumber1 = new SampleExercise(2,6);
-        SampleExercise ComplexNumber2 = new SampleExercise(4,3);
-        SampleExercise temp = sum(ComplexNumber1,ComplexNumber2);
+        SampleExercise_1 ComplexNumber1 = new SampleExercise_1(2,6);
+        SampleExercise_1 ComplexNumber2 = new SampleExercise_1(4,3);
+        SampleExercise_1 temp = sum(ComplexNumber1,ComplexNumber2);
         System.out.println("Addition of two Complex Numbers:" +temp.real + "+" + +temp.imaginary);
     }
     double real,imaginary;
-    SampleExercise(double R,double I){
+    SampleExercise_1(double R, double I){
         this.real =R;
         this.imaginary =I;
     }
-    public static SampleExercise sum(SampleExercise complexNumber1, SampleExercise complexNumber2) {
-        SampleExercise temp = new SampleExercise(0,0);
+    public static SampleExercise_1 sum(SampleExercise_1 complexNumber1, SampleExercise_1 complexNumber2) {
+        SampleExercise_1 temp = new SampleExercise_1(0,0);
         temp.real = complexNumber1.real + complexNumber2.real;
         temp.imaginary = complexNumber1.imaginary+complexNumber2.imaginary;
         return temp;
